@@ -1,0 +1,30 @@
+spring:
+#spring-datasource配置
+  datasource:
+    url: jdbc:mysql:///test00
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123123
+#spring-thymeleaf模板配置
+  thymeleaf:
+    mode: HTML5
+    cache: false
+#spring-ehcache缓存配置
+  cache:
+    ehcache:
+      config: classpath:com/cnf/ehcache.xml
+    type: ehcache
+        
+#mybatis配置
+mybatis:
+#别名pojo
+  type-aliases-package: com.example.pojo
+#映射配置文件位置  
+  mapper-locations: com/mapper/*.xml
+#服务器配置  
+server:
+  port: 80
+#日志级别配置  
+logging:
+  level:
+    com.example.dao: DEBUG
